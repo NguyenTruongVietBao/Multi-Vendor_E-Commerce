@@ -1,14 +1,15 @@
-import type { Metadata } from "next";
-import "./globals.css";
-import { DM_Sans } from "next/font/google";
+import type { Metadata } from 'next';
+import { DM_Sans } from 'next/font/google';
+import { Toaster } from 'sonner';
+import './globals.css';
 
 const dmSans = DM_Sans({
-  subsets: ["latin"],
+  subsets: ['latin'],
 });
 
 export const metadata: Metadata = {
-  title: "Multitenant Ecommerce",
-  description: "Multitenant Ecommerce",
+  title: 'Multitenant Ecommerce',
+  description: 'Multitenant Ecommerce',
 };
 
 export default function RootLayout({
@@ -18,11 +19,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${dmSans.className} antialiased`}
-      >
-        {children}
-      </body>
+      <body className={`${dmSans.className} antialiased`}>{children}</body>
+      <Toaster />
     </html>
   );
 }
