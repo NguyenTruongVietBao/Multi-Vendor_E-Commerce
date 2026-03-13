@@ -62,7 +62,7 @@ export const Navbar = () => {
     <nav className={`flex justify-between items-center font-medium bg-white h-20 border-b`}>
       {/* Logo */}
       <Link href="/" className="pl-6 flex items-center">
-        <span className={cn(poppins.className, 'text-5xl font-semibold')}>vb.store</span>
+        <span className={cn(poppins.className, 'text-5xl font-semibold')}>baron</span>
       </Link>
       <NavbarSidebar items={navbarItems} open={isSidebarOpen} onOpenChange={setIsSidebarOpen} />
       {/* Navbar Items */}
@@ -74,7 +74,7 @@ export const Navbar = () => {
         ))}
       </div>
       {/* Login & Register */}
-      <div className="hidden lg:flex">
+      <div className="hidden lg:flex h-full">
         <Button
           variant="secondary"
           className="border-l border-t-0 border-b-0 border-r-0 px-12 h-full bg-white hover:bg-pink-400 transition-colors text-lg"
